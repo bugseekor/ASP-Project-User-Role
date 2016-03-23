@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Choose Language";
+}
+
+<h2>Choose Language</h2>
+@using (@Html.BeginForm())
+{
+    <h4>
+        Current Culture 
+        @System.Threading.Thread.CurrentThread.CurrentCulture;
+        Language
+        @System.Threading.Thread.CurrentThread.CurrentUICulture
+    </h4>
+
+
+    @Html.DropDownList("language")
+    <input type="submit" value="Change Language" />
+}
+

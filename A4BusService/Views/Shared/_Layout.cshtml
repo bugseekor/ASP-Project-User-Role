@@ -1,0 +1,72 @@
+﻿@using A4BusService.App_GlobalResources;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Sangkyun's Assignment 5</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink(SPTranslations.Title, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(SPTranslations.Home, "", "Home")</li>
+                    <li>@Html.ActionLink(SPTranslations.BusRoutes, "Index", "BusRoute")</li>
+                    <li>@Html.ActionLink(SPTranslations.BusStops, "Index", "BusStop")</li>
+                    <li>@Html.ActionLink(SPTranslations.Drivers, "Index", "SPDriver")</li>
+                    <li>@Html.ActionLink(SPTranslations.ChangeLanguage, "ChangeLanguage", "SPLanguage")</li>
+                    
+                    @*Security menu - Only permit users of the administrators role see this item*@
+                    @if(User.IsInRole("administrators"))
+                    {
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Secutiry<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("User Maintenance", "Index", "SPUserMaintenance")</li>
+                                <li>@Html.ActionLink("Role Maintenance", "Index", "SPRoleMaintenance")</li>
+                            </ul>
+                        </li>
+                    }
+                </ul>   
+
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <span style="color:red; font-weight:bold">@TempData["message"]</span>
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="mailto:spark1435@conestogac.on.ca">Sangkyun Park</a>, @SPTranslations.Section
+                </div>
+                <div class="col-md-6" style="text-align: right">
+                    @Html.ActionLink(SPTranslations.About, "About", "Home") &nbsp; &nbsp;
+                    @Html.ActionLink(SPTranslations.Contact, "Contact", "Home")
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

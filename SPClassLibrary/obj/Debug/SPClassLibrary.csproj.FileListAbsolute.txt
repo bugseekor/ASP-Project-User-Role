@@ -1,0 +1,14 @@
+C:\A4BusService\SPClassLibrary\bin\Debug\SPClassLibrary.dll.config
+C:\A4BusService\SPClassLibrary\bin\Debug\SPClassLibrary.dll
+C:\A4BusService\SPClassLibrary\bin\Debug\SPClassLibrary.pdb
+C:\A4BusService\SPClassLibrary\bin\Debug\EntityFramework.dll
+C:\A4BusService\SPClassLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\A4BusService\SPClassLibrary\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\A4BusService\SPClassLibrary\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\A4BusService\SPClassLibrary\bin\Debug\EntityFramework.xml
+C:\A4BusService\SPClassLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\A4BusService\SPClassLibrary\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\A4BusService\SPClassLibrary\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\A4BusService\SPClassLibrary\obj\Debug\SPClassLibrary.dll
+C:\A4BusService\SPClassLibrary\obj\Debug\SPClassLibrary.pdb
+C:\A4BusService\SPClassLibrary\obj\Debug\SPClassLibrary.csprojResolveAssemblyReference.cache

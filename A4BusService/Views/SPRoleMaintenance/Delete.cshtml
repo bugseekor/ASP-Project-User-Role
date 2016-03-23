@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNet.Identity.EntityFramework;
+@model IEnumerable<A4BusService.Models.ApplicationUser>
+
+
+@{
+    ViewBag.Title = "Memebers in the \"" + ViewBag.roleName + "\" role to be deleted";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>User Name</th>
+    </tr>
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.UserName</td>
+        </tr>
+    }
+</table>
+
+@using (Html.BeginForm("Delete", "SPRoleMaintenance",  new { roleName = ViewBag.roleName }))
+{
+    <text>Delete role anyway</text>
+    <input type="submit" class="btn btn-default" value="Delete role anyway" />
+}
